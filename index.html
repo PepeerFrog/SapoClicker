@@ -5,25 +5,36 @@
       document.getElementById('precov2clicker').innerHTML = "Voce Tem " + saturno + "  Auto Baixador de Memes";
       document.getElementById('ammFourChan').innerHTML = " Voce Tem  " + fChan + " Criadores de Memes do 4CHAN";
       document.getElementById('precoFourChan').innerHTML = ((fChan+1) * 15) + " Memes de Sapo";
+      document.getElementById('ammPrecoDoCami').innerHTML = " Voce Tem " + blissn + " jeferson caminhãos"
+      document.getElementById('precoDoCami').innerHTML = ((blissn) * 20) + "Memes de Sapo";
+      document.getElementById('ammPrecoDoRafa').innerHTML = " Voce Tem " + rafa + " Rafa Hecker Man"
+      document.getElementById('precoDoRafa').innerHTML = ((rafa) * 30) + "Memes de Sapo";
+
+
+
     } 
     var putamerdamataramkenny = 0;
     var saturno = 0;
     var fChan = 0;
+    var blissn = 0;
+    var rafa = 0;
 
     function tempodealgo() {
       putamerdamataramkenny = putamerdamataramkenny + saturno;
       putamerdamataramkenny = putamerdamataramkenny + fChan*2;
+      putamerdamataramkenny = putamerdamataramkenny + blissn*7;
+      putamerdamataramkenny = putamerdamataramkenny + rafa*10;
       up()
     }
     setInterval(tempodealgo, 1000)
 </script>
 <html>
-    <head><title>Bem Vindo Ao Sapo Clicker Ainda não.com</title></head>
+    <head><title>0 Memes de Sapo</title></head>
     <body>
         <a href=# onclick="add()"><img src="sapo.jpg"></a>
         <br><br>
          
-        <input type="text" id="text" disabled style= text-align:center>
+        <input type="text" id="text" disabled style= text-align:center value=0>
         <script>
             function add() {
                 putamerdamataramkenny = putamerdamataramkenny +1
@@ -41,20 +52,38 @@
             <p id="precoclicker"> Memes de Sapos</p>
             <p id="precov2clicker"> Voce Tem 0 Auto Baixador de Memes</p>
 
+            <p>Comprar jeferson caminhoes</p>
+            <button><a href="#" onclick="camicao()"><img src ="jeffer.png" width=40px height="40px"></a></button>
+            <p id="precoDoCami">21 Memes de Sapos</p>
+            <p id="ammPrecoDoCami">Voce Tem 0 jeferson caminhoes</p>
+
+            <p>Comprar Rafa o Hecker Man Baixador de Memes</p>
+            <button><a href="#" onclick="rafadudu()"><img src ="hd.png" width=40px height="40px"></a></button>
+            <p id="precoDoRafa">30 Memes de Sapos</p>
+            <p id="ammPrecoDoRafa">Voce Tem 0 Rafa Hecker</p>
+             
+             <br>
+
             <p>Comprar Criador de Memes do 4Chan que tem 30 Anos</p>
             <button><a href="#" onclick="comprarFourChan()"><img src ="user.jpg" width=40px height="40px"></a></button>
             <p id="precoFourChan">15 Memes de Sapos</p>
             <p id="ammFourChan">Voce Tem 0 Criadores de Memes do 4CHAN</p>
+
             <script>
              function gumball() {
             localStorage.setItem("putamerdamataramkenny", putamerdamataramkenny);
             localStorage.setItem("sigmamyballs", saturno);
             localStorage.setItem("fourChanUser",fChan);
+            localStorage.setItem("jeffs",blissn);
 
         }
         function aquateen() {
             putamerdamataramkenny = localStorage.getItem("putamerdamataramkenny");
             putamerdamataramkenny = parseInt(putamerdamataramkenny);
+            world = localStorage.getItem("blissn");
+            world = parseInt("world");
+            comi = localStorage.getItem("fChan");
+            comi = parseInt("comi");
             document.title = putamerdamataramkenny + " Memes de Sapo Carregados";
         }
         function batataclicker() {
@@ -71,6 +100,20 @@
              fChan = fChan + 1;
              up()
             }
+
+            function camicao() {
+                if (putamerdamataramkenny >= ((blissn) * 20))
+                putamerdamataramkenny = putamerdamataramkenny - ((blissn) * 20);
+                blissn = blissn + 1;
+                up()
+            }
+
+            function rafadudu() {
+                if (putamerdamataramkenny >= ((rafa) * 20))
+                putamerdamataramkenny = putamerdamataramkenny - ((rafa) * 20);
+                rafa = rafa + 1;
+            }
+
             </script>
     </body>
 </html>

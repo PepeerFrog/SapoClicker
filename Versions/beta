@@ -1,0 +1,76 @@
+<script>
+    function up() {
+      document.getElementById('text').value = putamerdamataramkenny;
+      document.title = putamerdamataramkenny + "Memes de Sapos";
+      document.getElementById('precov2clicker').innerHTML = "Voce Tem " + saturno + "  Auto Baixador de Memes";
+      document.getElementById('ammFourChan').innerHTML = " Voce Tem  " + fChan + " Criadores de Memes do 4CHAN";
+      document.getElementById('precoFourChan').innerHTML = ((fChan+1) * 15) + " Memes de Sapo";
+    } 
+    var putamerdamataramkenny = 0;
+    var saturno = 0;
+    var fChan = 0;
+
+    function tempodealgo() {
+      putamerdamataramkenny = putamerdamataramkenny + saturno;
+      putamerdamataramkenny = putamerdamataramkenny + fChan*2;
+      up()
+    }
+    setInterval(tempodealgo, 1000)
+</script>
+<html>
+    <head><title>Bem Vindo Ao Sapo Clicker Ainda não.com</title></head>
+    <body>
+        <a href=# onclick="add()"><img src="sapo.jpg"></a>
+        <br><br>
+         
+        <input type="text" id="text" disabled style= text-align:center>
+        <script>
+            function add() {
+                putamerdamataramkenny = putamerdamataramkenny +1
+                document.getElementById('text').value = putamerdamataramkenny;
+                document.title = putamerdamataramkenny +  "  Memes de Sapos"
+
+            }
+            </script>
+            Memes de Sapos
+            <br><br>
+            <button><a href="#"onclick="gumball()">Salvar</button>
+            <button><a href="#"onclick="aquateen()">Carregar</button>
+            <p>Comprar Auto Baixador de Memes</p>
+            <button><a href="#" onclick="batataclicker()"><img src="mouse.png" width="30px" height="40px"></a></button>
+            <p id="precoclicker"> Memes de Sapos</p>
+            <p id="precov2clicker"> Voce Tem 0 Auto Baixador de Memes</p>
+
+            <p>Comprar Criador de Memes do 4Chan que tem 30 Anos</p>
+            <button><a href="#" onclick="comprarFourChan()"><img src ="user.jpg" width=40px height="40px"></a></button>
+            <p id="precoFourChan">15 Memes de Sapos</p>
+            <p id="ammFourChan">Voce Tem 0 Criadores de Memes do 4CHAN</p>
+            <script>
+             function gumball() {
+            localStorage.setItem("putamerdamataramkenny", putamerdamataramkenny);
+            localStorage.setItem("sigmamyballs", saturno);
+            localStorage.setItem("fourChanUser",fChan);
+
+        }
+        function aquateen() {
+            putamerdamataramkenny = localStorage.getItem("putamerdamataramkenny");
+            putamerdamataramkenny = parseInt(putamerdamataramkenny);
+            document.title = putamerdamataramkenny + " Memes de Sapo Carregados";
+        }
+        function batataclicker() {
+            if (putamerdamataramkenny >= ((saturno +1) * 12)) 
+                putamerdamataramkenny = putamerdamataramkenny - ((saturno+1) * 12);
+                saturno = saturno + 1;
+                document.getElementById('text').value = putamerdamataramkenny;
+                up()
+            }
+
+            function comprarFourChan() {
+            if (putamerdamataramkenny >= ((fChan+1) * 15)) 
+            putamerdamataramkenny = putamerdamataramkenny - ((fChan) * 15);
+             fChan = fChan + 1;
+             up()
+            }
+            </script>
+    </body>
+</html>
